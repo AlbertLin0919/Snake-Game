@@ -26,14 +26,15 @@ body {
 #myScore,
 #myScore2 {
   color: white;
-  font-size: 2rem;
+  font-size: 1.75rem;
   padding: 10px;
 }
 #start {
   padding: 0.25rem 0.5rem;
   background-color: yellow;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   display: block;
-  margin-top: 10rem;
+  margin-top: 4rem;
   cursor: pointer;
+  border-radius: 10px;
 }
