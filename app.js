@@ -176,7 +176,7 @@ function draw() {
   window.addEventListener("keydown", changeDirection);
 }
 
-let myGame = setInterval(draw, 80);
+let myGame = setInterval(draw, 100);
 
 function loadHighestScore() {
   if (localStorage.getItem("highestScore") == null) {
