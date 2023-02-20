@@ -6,6 +6,8 @@ const unit = 25;
 const row = canvas.height / unit; //500 / 25 = 20
 const column = canvas.width / unit; //500 / 25 = 20
 
+let speed = 100;
+
 let snake = []; //array中的每個元素，都是一個物件
 function createSnake() {
   //物件的工作室，儲存身體的x,y座標
@@ -161,6 +163,9 @@ function draw() {
   if (snake[0].x == myFruit.x && snake[0].y == myFruit.y) {
     //重新選定一個新的隨機位置
     myFruit.pickALocation();
+    speed -= 5;
+    clearInterval(myGame);
+    myGame = setInterval(draw, speed);
     //畫出新果實
     myFruit.drawFruit();
     //更新分數
@@ -176,7 +181,7 @@ function draw() {
   window.addEventListener("keydown", changeDirection);
 }
 
-let myGame = setInterval(draw, 100);
+let myGame = setInterval(draw, speed);
 
 function loadHighestScore() {
   if (localStorage.getItem("highestScore") == null) {
