@@ -163,7 +163,7 @@ function draw() {
   if (snake[0].x == myFruit.x && snake[0].y == myFruit.y) {
     //重新選定一個新的隨機位置
     myFruit.pickALocation();
-    speed -= 5;
+    speed -= 2;
     clearInterval(myGame);
     myGame = setInterval(draw, speed);
     //畫出新果實
