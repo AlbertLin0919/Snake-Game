@@ -172,7 +172,7 @@ function draw() {
     score++;
     setHighestScore(score);
     document.getElementById("myScore").innerHTML = `遊戲分數:${score}`;
-    document.getElementById("myScore2").innerHTML = `遊戲分數:${highestScore}`;
+    document.getElementById("myScore2").innerHTML = `最高分數:${highestScore}`;
   } else {
     snake.pop();
   }
